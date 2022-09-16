@@ -39,6 +39,8 @@ public class SmallestSwap {
             System.out.println(m);
         }
 
+        sc.close();
+
     }
     
 }
