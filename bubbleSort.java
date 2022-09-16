@@ -4,17 +4,24 @@ public class bubbleSort {
 
     public static void main(String[] args) {
 
-        int[] data = {45, 93, 33, 55};
+        int[] data = {23, 45, 66, 12, 87, 19};
 
-        boolean condition = true;
+        boolean condition;
+
+        if (data.length < 1) {      //test to see if array is empty
+            condition = false;
+        }
+        else {
+            condition = true;
+        }
 
         outerloop:
-            while (condition == true) {
+            while (condition == true) {    
 
                 int counter = 0;
 
                 for (int i = 0; i < data.length - 1; i++) {
-                    if (data[i] < data[i + 1]) {
+                    if (data[i] < data[i + 1] || data[i] == data[i + 1]) {  //test to see if adjacent numbers are already sorted or the same
                         counter ++;
                     }
                     else {
