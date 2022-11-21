@@ -1,24 +1,23 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
-public class tester {
+public class Tester {
 
     public static void main(String[] args) {
 
-        int[] data = {1,2,3,4,5,6};
+        int x = 121;
 
-        int indexToRemove = 4;
+        String temp = String.valueOf(x);
+
+        int[] array = new int[temp.length()];
         
-        for (int i: data) {
-            if (i == 4) {
-                i = 6;
-                break;
-            }
+        for (int i = 0; i < temp.length(); i ++) {
+            array[i] = temp.charAt(i) - '0';
+
         }
 
-        System.out.print(Arrays.toString(data));
-
-        
+        System.out.print(Arrays.toString(array));
 
     }
-    
+
 }
